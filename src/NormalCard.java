@@ -20,29 +20,20 @@ public class NormalCard extends BaseCard {
     public static final String PIP = "23456789TJQKA";
     public static final String SUIT ="CDHS";
     public int rank;//0-12
-    public int seq;//0-51
     NormalCard(String s, String p)
     {
         this.setPip(p);
         this.setSuit(s);
         this.setRank(p);
-        this.setSeq(s,p);
     }
     void setRank(String p)
     {
         rank= PIP.indexOf(p);
     }
-    void setSeq(String s, String p)
-    {
-        seq= SUIT.indexOf(s)*13+ PIP.indexOf(p);
-    }
+
     int getRank()
     {
         return rank;
-    }
-    int getSeq()
-    {
-        return seq;
     }
     public int compareTo(NormalCard o) {
         // TODO Auto-generated method stub
