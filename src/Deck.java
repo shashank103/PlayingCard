@@ -9,7 +9,7 @@ public class NormalDeck {
     {
         for( int i=0;i<numPack;i++)
         {
-            NormalPack temp= new NormalPack(numJoker);
+            Pack temp= new Pack(numJoker);
             deck.addAll(temp.pack);
         }
     }
