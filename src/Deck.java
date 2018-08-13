@@ -9,9 +9,11 @@ public class Deck {
     {
         for( int i=0;i<numPack;i++)
         {
-            Pack temp= new Pack(numJoker);
+            Pack temp= new Pack(0);
             deck.addAll(temp.pack);
         }
+        for(int i=0;i<numJoker;i++)
+            deck.add(new JokerCard());
     }
     public void shuffle()
     {
