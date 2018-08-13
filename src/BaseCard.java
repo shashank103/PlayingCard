@@ -10,7 +10,13 @@ abstract class BaseCard {
     {
         return this.pip;
     }
-    public abstract void setSuit(String s);
-    public abstract void setPip(String s);
+    public  void setSuit(String s)
+    {
+        suit=s;
+    }
+    public  void setPip(String p)
+    {
+        pip=p;
+    }
 }
 

@@ -1,7 +1,8 @@
 public class NormalCard extends BaseCard {
     public NormalCard() {
     }
-
+    public static final String PIP = "23456789TJQKA";
+    public static final String SUIT ="CDHS";
     public String getSuit()
     {
         return suit;
@@ -17,8 +18,7 @@ public class NormalCard extends BaseCard {
     public void setSuit(String s) {
         suit=s;
     }
-    public static final String PIP = "23456789TJQKA";
-    public static final String SUIT ="CDHS";
+
     public int rank;//0-12
     NormalCard(String s, String p)
     {
