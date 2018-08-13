@@ -1,8 +1,7 @@
 public class NormalCard extends BaseCard {
     public NormalCard() {
     }
-    public static final String PIP = "23456789TJQKA";
-    public static final String SUIT ="CDHS";
+
     public String getSuit()
     {
         return suit;
@@ -19,21 +18,11 @@ public class NormalCard extends BaseCard {
         suit=s;
     }
 
-    public int rank;//0-12
     NormalCard(String s, String p)
     {
         this.setPip(p);
         this.setSuit(s);
         this.setRank(p);
-    }
-    void setRank(String p)
-    {
-        rank= PIP.indexOf(p);
-    }
-
-    int getRank()
-    {
-        return rank;
     }
     public int compareTo(NormalCard o) {
         // TODO Auto-generated method stub

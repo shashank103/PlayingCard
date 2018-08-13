@@ -3,9 +3,9 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Random;
 
-public class NormalDeck {
+public class Deck {
     ArrayList<BaseCard> deck = new ArrayList<>();
-    NormalDeck(int numPack, int numJoker)
+    Deck(int numPack, int numJoker)
     {
         for( int i=0;i<numPack;i++)
         {
