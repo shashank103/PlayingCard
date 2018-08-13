@@ -1,4 +1,4 @@
-abstract class BaseCard {
+abstract class BaseCard implements Comparable<NormalCard>{
 
     String suit;
     String pip;
@@ -13,11 +13,11 @@ abstract class BaseCard {
     {
         return this.pip;
     }
-    public  void setSuit(String s)
+   public void setSuit(String s)
     {
         suit=s;
     }
-    public  void setPip(String p)
+    public void setPip(String p)
     {
         pip=p;
     }
@@ -26,7 +26,11 @@ abstract class BaseCard {
     {
         rank= PIP.indexOf(p)+2;
     }
+    public int compareTo(NormalCard o) {
+        // TODO Auto-generated method stub
+        return (this.rank-o.rank);
 
+    }
     int getRank()
     {
         return rank;

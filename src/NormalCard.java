@@ -1,4 +1,6 @@
-public class NormalCard extends BaseCard implements Comparable<NormalCard>{
+import java.util.ArrayList;
+
+public class NormalCard extends BaseCard {
     public NormalCard() {
     }
 
@@ -9,6 +11,16 @@ public class NormalCard extends BaseCard implements Comparable<NormalCard>{
     public String getPip()
     {
         return pip;
+    }
+   public static ArrayList<BaseCard> generateAllCard()
+    {
+        ArrayList<BaseCard> temp =new ArrayList<>();
+        for (char p : PIP.toCharArray()) {
+            for (char s : SUIT.toCharArray()) {
+                temp.add(new NormalCard(Character.toString(s), Character.toString(p)));
+            }
+        }
+        return temp;
     }
     public void setPip(String s) {
         pip=s;
@@ -24,11 +36,7 @@ public class NormalCard extends BaseCard implements Comparable<NormalCard>{
         this.setSuit(s);
         this.setRank(p);
     }
-    public int compareTo(NormalCard o) {
-        // TODO Auto-generated method stub
-        return (this.rank-o.rank);
 
-    }
 
     public boolean isSameSuit(NormalCard a, NormalCard b)
     {
@@ -40,4 +48,5 @@ public class NormalCard extends BaseCard implements Comparable<NormalCard>{
         return a.getPip()==b.getPip();
 
     }
+
 }

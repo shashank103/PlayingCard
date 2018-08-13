@@ -135,7 +135,7 @@ public class PokerHand {
 
     public boolean isFlush(){
         for(int i=1;i<MAX_CARD;i++){
-            if(hand[0].suit != hand[i].suit)
+            if(hand[0].getSuit() != hand[i].getSuit())
                 return false;
         }
         return true;
