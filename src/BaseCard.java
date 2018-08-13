@@ -24,7 +24,7 @@ abstract class BaseCard {
 
     void setRank(String p)
     {
-        rank= PIP.indexOf(p);
+        rank= PIP.indexOf(p)+2;
     }
 
     int getRank()

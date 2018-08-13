@@ -1,4 +1,4 @@
-public class NormalCard extends BaseCard {
+public class NormalCard extends BaseCard implements Comparable<NormalCard>{
     public NormalCard() {
     }
 
